@@ -4,14 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanha Enterprises - Solar Solutions</title>
-  <link rel="stylesheet" href="../styles/service.css" />
-  <link rel="stylesheet" href="../styles/feature.css" />
+  <link rel="stylesheet" href="../styles/product.css" />
   <link rel="stylesheet" href="../styles/footer.css" />
   <link rel="stylesheet" href="../styles/hamburger-menu.css" />
-  <script defer src="../js/service.js"></script>
+  <script defer src="../js/product.js"></script>
   <script defer src="../js/animation.js"></script>
   <script defer src="../js/counter.js"></script>
   <script defer src="../js/hamburger-menu.js"></script>
+  <link rel="stylesheet" href="../styles/profeature.css" />
+
+  
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -25,8 +27,8 @@
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../pages/about.html">About Us</a></li>
-        <li><a href="../pages/product.html">Products</a></li>
-        <li><a href="../pages/service.html" class="active">Services</a></li>
+        <li><a href="../pages/product.html" class="active">Products</a></li>
+        <li><a href="../pages/service.html">Services</a></li>
         <li><a href="../pages/project.html">Projects</a></li>
         <li><a href="../pages/client.html">Clients</a></li>
         <li><a href="../pages/contact.html">Contact</a></li>
@@ -35,9 +37,7 @@
     </nav>
 
     <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
   </header>
 
@@ -53,12 +53,12 @@
       <nav class="mobile-nav">
         <ul>
           <li><a href="../index.html" class="active">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="product.html">Products</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="project.html">Projects</a></li>
-          <li><a href="client.html">Clients</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../pages/about.html">About Us</a></li>
+          <li><a href="../pages/product.html">Products</a></li>
+          <li><a href="../pages/service.html">Services</a></li>
+          <li><a href="../pages/project.html">Projects</a></li>
+          <li><a href="../pages/client.html">Clients</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
         </ul>
       </nav>
       
@@ -69,7 +69,7 @@
   <!-- ===== HERO SECTION ===== -->
   <section id="home" class="hero">
     <video autoplay muted loop playsinline>
-      <source src="../solar1.mp4" type="video/mp4">
+      <source src="../solarvid.mov" type="video/mp4">
     </video>
     <div class="hero-content">
       <h2 class="slide-left">Welcome to <span>Kanha Enterprises</span></h2>
@@ -79,83 +79,152 @@
   </section>
 
   <!-- ===== PRODUCTS ===== -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <section class="services-section" id="services">
-        <div class="services-heading">
-        </div>
-      
-        <div class="service-container">
-          <div class="service-image">
-            <img id="service-slide" src="../images/solar-roof-top-residential.jpg" alt="Service Image" />
-          </div>
-      
-          <div class="service-list slide-left">
-            <ul>
-              <li>▶ Renewable Project Development</li>
-              <li>▶ Transmission Lines and Substations</li>
-              <li>▶ Engineering, Procurement, and Construction (EPC) Projects</li>
-              <li>▶ Operations and Maintenance (O&M)</li>
-              <li>▶ Pre-Development Solutions</li>
-              <li>▶ Consulting and Advisory Services</li>
-              <li>▶ Solar Services</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-  
-  </section>
+  <section id="products" class="section slide-up">
+    <h2>Our Products</h2>
+  <!-- Filter Buttons -->
+  <div class="filter-tabs slide-left">
+    <button class="filter-btn active" data-target="residential">Solar Rooftop - Residential</button>
+    <button class="filter-btn" data-target="commercial">Solar Rooftop – Commercial & Industrial</button>
+    <button class="filter-btn" data-target="pump">Solar Water Pump</button>
+    <button class="filter-btn" data-target="carports">Carports</button>
+  </div>
 
-  <!-- ===== PRODUCTS ===== -->
-  <section id="products" class="section dark slide-up">
-    <!-- ===== SERVICES ===== -->
+  <!-- Filter Content -->
+  <div class="filter-content active" id="residential">
+    <img src="../images/solar-roof-top-residential.jpg" alt="Residential Solar Rooftop" class="product-img" />
+    <div class="product-text">
+      <h3>Solar Rooftop - Residential</h3>
+      <p>
+        Harness the Sun’s energy right on your rooftop. Dedicated to making our planet cleaner and greener,
+        we deliver eco-friendly power through advanced residential solar rooftop solutions, with a strong
+        focus on sustainability. Our smart offerings bring reliable solar energy to homes, villas, and more.
+      </p>
+      <p>
+        These solutions are built on trust, reliability, and state-of-the-art technology. Our top solar
+        system applications are crafted to integrate smoothly with all types of home solar panels.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
     <section class="features-section">
         <div class="features-container">
-      
+          <!--Commercial-->
           <!-- Feature 1 -->
           <div class="feature-box">
-            <img src="../icons/satisfaction.png" alt="Customer Delight" class="feature-icon">
-            <h3 class="feature-title">Customer Delight</h3>
-            <p class="feature-subtitle">We strive to deliver excellence in every aspect, ensuring complete satisfaction for our customers.</p>
+            <img src="enviroment.png" alt="Environment Icon" class="feature-icon">
+            <h3 class="feature-title">A cleaner environment and reduced carbon footprint</h3>
           </div>
       
           <!-- Feature 2 -->
           <div class="feature-box">
-            <img src="../icons/trust.png" alt="Trust" class="feature-icon">
-            <h3 class="feature-title">Trust</h3>
-            <p class="feature-subtitle">The foundation of all our relationships with clients, partners, and stakeholders.</p>
+            <img src="roof.png" alt="Roof Icon" class="feature-icon">
+            <h3 class="feature-title">Optimum usage of available roof area</h3>
           </div>
       
           <!-- Feature 3 -->
           <div class="feature-box">
-            <img src="../icons/quality-assurance.png" alt="Quality & Safety" class="feature-icon">
-            <h3 class="feature-title">Quality & Safety</h3>
-            <p class="feature-subtitle">An uncompromising principle that defines our operations and services.</p>
+            <img src="thunderbolt.png" alt="Power Icon" class="feature-icon">
+            <h3 class="feature-title">Less reliability on traditional power sources</h3>
           </div>
       
           <!-- Feature 4 -->
           <div class="feature-box">
-            <img src="../icons/sustainable.png" alt="Sustainability" class="feature-icon">
-            <h3 class="feature-title">Sustainability</h3>
-            <p class="feature-subtitle">Our long-term goal, driving us to create solutions that benefit both people and the planet.</p>
+            <img src="monitoring.png" alt="Monitor Icon" class="feature-icon">
+            <h3 class="feature-title">Option to monitor power consumption</h3>
           </div>
       
           <!-- Feature 5 -->
           <div class="feature-box">
-            <img src="../icons/ethics.png" alt="Ethics & Integrity" class="feature-icon">
-            <h3 class="feature-title">Ethics & Integrity</h3>
-            <p class="feature-subtitle">The guiding values that shape our actions and strengthen our existence.</p>
+            <img src="consult.png" alt="Consulting Icon" class="feature-icon">
+            <h3 class="feature-title">Regulatory Consulting & Support</h3>
           </div>
       
           <!-- Feature 6 -->
           <div class="feature-box">
-            <img src="../icons/progress.png" alt="RISE Philosophy" class="feature-icon">
-            <h3 class="feature-title">RISE Philosophy</h3>
-            <p class="feature-subtitle">Focused on People, Planet, and Profit to create a balanced and sustainable future.</p>
+            <img src="quality-assurance.png" alt="Quality Icon" class="feature-icon">
+            <h3 class="feature-title">Quality Assurance</h3>
           </div>
         </div>
       </section>
+  </div>
 
+  <div class="filter-content" id="commercial">
+    <img src="../images/commercial-industrial.jpg" alt="Commercial Solar Rooftop" class="product-img" />
+    <div class="product-text">
+      <h3>Solar Rooftop – Commercial & Industrial</h3>
+      <p>
+        For businesses, adopting commercial solar rooftop solutions ensures significant savings by lowering
+        electricity costs. Kanha Rooftop Solutions has assisted numerous industrial and commercial clients
+        in accessing high-quality solar panels and systems to harness solar energy effectively.
+      </p>
+      <p>
+        Our solar-powered billboards deliver excellent returns on investment compared to other solar
+        solutions. Today, solar power systems have become vital for corporate offices, helping industries
+        cut down on grid electricity usage.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+    
+  </div>
+
+  <div class="filter-content" id="pump">
+    <img src="../images/water-pump.jpg" alt="Solar Water Pump" class="product-img" />
+    <div class="product-text">
+      <h3>Solar Water Pump</h3>
+      <p>
+        The Solar Water Pump initiative reflects Kanha Enterprise’s commitment to improving rural livelihoods,
+        particularly supporting farmers.
+      </p>
+      <p>
+        Equipped with advanced features such as dry-run protection, low power operation, overload safeguards,
+        and lightning arresters, our solar pumps irrigate crops using clean solar energy — suitable for both
+        agricultural and domestic use.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="filter-content" id="carports">
+    <img src="../images/products-carport.jpg" alt="Solar Carports" class="product-img" />
+    <div class="product-text">
+      <h3>Carports</h3>
+      <p>
+        Transform your regular parking area into a solar-powered carport. As a leading provider of solar carport
+        solutions, we convert unused parking spaces into energy-generating structures.
+      </p>
+      <p>
+        This approach not only provides shelter for vehicles but also produces clean, renewable energy, maximizing
+        the use of valuable space efficiently.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+  </div>
+</section>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section id="products" class="section dark slide-left">
+    <h2> Why Solarise Your Rooftop?</h2>
+    <div class="why-solar-container">
+      <div class="why-solar-content">
+        <h2 class="section-heading">Why Solarise Your Rooftop?</h2>
+        <ul class="solar-benefits-list">
+          <li>🌞 Minimise your electricity bill</li>
+          <li>🌞 25 Years module output warranty</li>
+          <li>🌞 Protection from future electric price hike</li>
+          <li>🌞 Tax benefits</li>
+          <li>🌞 Reduce the heat trap to your property</li>
+          <li>🌞 Reduce carbon footprint</li>
+          <li>🌞 Low maintenance</li>
+          <li>🌞 Increase value of your home</li>
+          <li>🌞 Benefits of Government subsidies</li>
+        </ul>
+      </div>
+  
+      <div class="why-solar-image slide-right">
+        <img src="../images/solar-roof-top-residential.jpg" alt="Solar Rooftop">
+      </div>
+    </div>
+  </section>
   </section>
 
   <!-- ===== SERVICES ===== -->
@@ -242,9 +311,9 @@
             <strong>PIN:</strong> 457001
           </p>
           <div class="footer-certificates">
-            <img src="certificate1.png" alt="IMS Certificate">
-            <img src="certificate2.png" alt="IMS Certificate">
-            <img src="certificate3.png" alt="IMS Certificate">
+            <img src="../icons/90001.png" alt="IMS Certificate">
+            <img src="../icons/—Pngtree—iso 14001 certified company logo_8540372.png" alt="IMS Certificate">
+            <img src="../icons/png45001.png" alt="IMS Certificate">
           </div>
         </div>
       </div>
