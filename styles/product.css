@@ -1,0 +1,503 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --green: #7ac943;
+  --header-h: 72px;
+  --dark: #0b0b0b;
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:"Poppins",sans-serif;
+  color:#111;
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding-top:var(--header-h); /* avoids header overlap */
+}
+
+/* HEADER */
+header{
+  position:fixed;top:0;left:0;right:0;
+  height:var(--header-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;
+  background:rgba(0,0,0,0.65);backdrop-filter: blur(4px);
+  z-index:1500;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:52px;width:auto;display:block}
+.logo h1{color:var(--green);font-size:18px;font-weight:700;letter-spacing:1px}
+
+/* Desktop navbar */
+.navbar{display:flex}
+.navbar ul{display:flex;gap:22px;align-items:center;list-style:none}
+.navbar a{color:#fff;text-decoration:none;font-weight:500;padding:6px 4px;transition:color .2s}
+.navbar a:hover,.navbar a.active{color:var(--green)}
+.btn{background:var(--green);color:#fff;padding:8px 16px;border-radius:28px;text-decoration:none}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .btn {
+    background: var(--green);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulse 2s infinite;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background-color: rgb(10, 10, 10);
+    }
+
+    .btn-primary {
+        background: var(--green);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 15px;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: pulse 2s infinite;
+        display: inline-block;
+      }
+      
+    .btn-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          background-color: rgb(10, 10, 10);
+        }
+
+/* Hamburger (hidden on desktop) */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:26px;height:3px;background:#fff;border-radius:3px;display:block;transition:transform .25s,opacity .25s}
+
+/* HERO */
+.hero{position:relative;height:calc(100vh - var(--header-h));overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));}
+.hero-content{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:2;padding:18px;max-width:1100px}
+.hero-content h2{font-size:3rem;margin-bottom:10px}
+.hero-content h2 span{color:var(--green)}
+.hero-content p{font-size:1.1rem;margin-bottom:18px}
+.btn-primary{background:var(--green);padding:12px 26px;border-radius:30px;color:#fff;text-decoration:none;font-weight:600}
+
+/* Sections */
+.section{padding:70px 10%;text-align:center}
+.section.dark{background:#0f0f0f;color:#eee}
+.section h2{color:var(--green);margin-bottom:14px;font-size:2rem}
+.section p{max-width:900px;margin:0 auto;line-height:1.7}
+
+/* Footer */
+footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.95rem}
+
+/* MOBILE / TABLET */
+@media (max-width:900px){
+  header{padding:10px 18px}
+  .logo h1{font-size:15px}
+  .navbar{display:none;position:fixed;top:var(--header-h);right:14px;width:86vw;max-width:300px;background:rgba(0,0,0,0.95);border-radius:10px;padding:18px;transform:translateX(110%);transition:transform .28s ease,opacity .28s;opacity:0}
+  .navbar.active{transform:translateX(0);opacity:1;display:block}
+  .navbar ul{flex-direction:column;align-items:flex-start;gap:12px}
+  .hamburger{display:flex}
+  /* hamburger open animation */
+  .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  /* hero text smaller */
+  .hero-content h2{font-size:1.6rem}
+  .hero-content p{font-size:1rem}
+}
+
+  /* ===== OUR PRODUCTS ===== */
+.products {
+    background: linear-gradient(160deg, #0b0b0b 0%, #121212 100%);
+    color: #0b0b0b;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 70px 0;
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    border: 2px solid var(--green);
+    color: #0b0b0b;
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: var(--green);
+    color: #fff;
+  }
+  
+  .filter-content {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    animation: fadeIn 0.6s ease;
+  }
+  
+  .filter-content.active {
+    display: flex;
+  }
+  
+  .product-img {
+    width: 460px;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .product-text {
+    max-width: 580px;
+    text-align: left;
+  }
+  
+  .product-text h3 {
+    color: var(--green);
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+  
+  .product-text p {
+    color: #0b0b0b;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .filter-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .product-text {
+      text-align: center;
+    }
+  }
+
+  /* ================= WHY SOLARISE YOUR ROOFTOP ================= */
+.why-solar-section {
+    background: #ffffff;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .why-solar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .why-solar-content {
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  .why-solar-content .section-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #7ac943;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .why-solar-content .section-heading::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #f2c335;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 3px;
+  }
+  
+  .solar-benefits-list {
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 0;
+  }
+  
+  .solar-benefits-list li {
+    font-size: 1.05rem;
+    color: #eee;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+  }
+  
+  .solar-benefits-list li:hover {
+    transform: translateX(8px);
+    color: #7ac943;
+    font-weight: 600;
+  }
+  
+  .why-solar-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    animation: fadeInRight 1s ease-in-out;
+  }
+  
+  .why-solar-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+  }
+  
+  .why-solar-image img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Animations */
+  @keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .why-solar-section {
+      padding: 60px 5%;
+    }
+  
+    .why-solar-container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .why-solar-content .section-heading {
+      font-size: 1.8rem;
+    }
+  
+    .solar-benefits-list li {
+      font-size: 1rem;
+      justify-content: center;
+    }
+  
+    .why-solar-image img {
+      max-width: 100%;
+    }
+  }
+  
+  
+  
+  /* ===== PERFORMANCE STATS ===== */
+  .stats-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+  .stat-card {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 35px 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity:0;
+  }
+  .stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  .stat-card h3 {
+    color: var(--green);
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .stat-card p {
+    color: #0e0d0d;
+    font-size: 1rem;
+  }
+  
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    0% {opacity:0; transform: translateY(20px);}
+    100% {opacity:1; transform: translateY(0);}
+  }
+  @keyframes fadeInRight {
+    0% {opacity:0; transform: translateX(20px);}
+    100% {opacity:1; transform: translateX(0);}
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:900px){
+    .why-solar-container {flex-direction: column; gap:25px;}
+    .why-solar-text, .why-solar-image {animation:none; opacity:1;}
+    .stats-grid {grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));}
+  }
+  
+  /* ================= PERFORMANCE OVERVIEW ================= */
+.performance-section {
+    background: transparent;
+    padding: 80px 10%;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .performance-section .section-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #7ac943; /* Deep green for solar theme */
+    margin-bottom: 60px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .performance-section .section-heading::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: #4d7c38; /* Yellow accent from logo */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 5px;
+  }
+  
+  .performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .performance-card {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .performance-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .performance-card h3 {
+    font-size: 2.2rem;
+    color: #7ac943;
+    font-weight: 800;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .performance-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .performance-card:hover h3 {
+    color: #4d7c38;
+  }
+  
+  @media (max-width: 768px) {
+    .performance-section {
+      padding: 60px 5%;
+    }
+  
+    .performance-card {
+      padding: 30px 20px;
+    }
+  
+    .performance-card h3 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Slide Left Animation */
+ .slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .slide-left.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ===== Slide Right ===== */
+.slide-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .slide-right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* ===== Slide Up ===== */
+  .slide-up {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

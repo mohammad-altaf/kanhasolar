@@ -1,0 +1,170 @@
+/* ==========================================================
+   🌞 KANHA ENTERPRISES | Animation Effects
+   Triggered on Scroll (Fade, Slide, Zoom, Flip + Extras)
+   ========================================================== */
+
+/* 🔸 Base animation setup */
+.fade-in,
+.slide-left,
+.slide-right,
+.zoom-in,
+.flip-in,
+.slide-up,
+.slide-down,
+.rotate-in,
+.scale-up,
+.bounce-in,
+.blur-in,
+.flip-up,
+.light-speed {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* ====== ORIGINAL EFFECTS ====== */
+
+/* 1️⃣ Fade In */
+.fade-in {
+  transform: translateY(20px);
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2️⃣ Slide Left */
+.slide-left {
+  transform: translateX(-60px);
+}
+.slide-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 3️⃣ Slide Right */
+.slide-right {
+  transform: translateX(60px);
+}
+.slide-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 4️⃣ Zoom In */
+.zoom-in {
+  transform: scale(0.8);
+}
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 5️⃣ Flip In */
+.flip-in {
+  transform: rotateY(90deg);
+  transform-origin: left;
+}
+.flip-in.show {
+  opacity: 1;
+  transform: rotateY(0);
+}
+
+/* ====== NEW PROFESSIONAL EFFECTS ====== */
+
+/* 6️⃣ Slide Up */
+.slide-up {
+  transform: translateY(60px);
+}
+.slide-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 7️⃣ Slide Down */
+.slide-down {
+  transform: translateY(-60px);
+}
+.slide-down.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 8️⃣ Rotate In */
+.rotate-in {
+  transform: rotate(-45deg);
+}
+.rotate-in.show {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+/* 9️⃣ Scale Up */
+.scale-up {
+  transform: scale(0.5);
+}
+.scale-up.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 🔟 Bounce In */
+.bounce-in {
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.bounce-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 11️⃣ Blur In */
+.blur-in {
+  filter: blur(8px);
+}
+.blur-in.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 12️⃣ Flip Up */
+.flip-up {
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+}
+.flip-up.show {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+/* 13️⃣ Light Speed (Diagonal Entrance) */
+.light-speed {
+  transform: translateX(-100%) skewX(30deg);
+}
+.light-speed.show {
+  opacity: 1;
+  transform: translateX(0) skewX(0);
+}
+
+/* ===== Optional Smooth Fade Delay (for sequencing) ===== */
+[data-delay] {
+  transition-delay: var(--delay, 0s);
+}
+
+/* ===== Accessibility: Reduce Motion Setting ===== */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .slide-left,
+  .slide-right,
+  .zoom-in,
+  .flip-in,
+  .slide-up,
+  .slide-down,
+  .rotate-in,
+  .scale-up,
+  .bounce-in,
+  .blur-in,
+  .flip-up,
+  .light-speed {
+    transition: none;
+  }
+}

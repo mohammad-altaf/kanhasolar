@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanha Enterprises - Solar Solutions</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/animation.css" />
+  <link rel="stylesheet" href="styles/hamburger-menu.css" />
+  <script defer src="js/script.js"></script>
+  <script defer src="js/animation.js"></script>
+  <script defer src="js/hamburger-menu.js"></script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <img src="KE LOGO.png" alt="Kanha Enterprises Logo">
+      <h1>KANHA ENTERPRISES</h1>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/product.html">Products</a></li>
+        <li><a href="pages/service.html">Services</a></li>
+        <li><a href="pages/project.html">Projects</a></li>
+        <li><a href="pages/client.html">Clients</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/contact.html" class="btn">Get Quote</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+<!-- Mobile Menu Overlay -->
+<div class="overlay-bg"></div>
+<div class="mobile-menu-overlay">
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-logo">
+      <img src="KE LOGO.png" alt="Kanha Enterprises Logo">
+      <div class="mobile-menu-subheading">Powering a Sustainable Future</div>
+    </div>
+    
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/product.html">Products</a></li>
+        <li><a href="pages/service.html">Services</a></li>
+        <li><a href="pages/project.html">Projects</a></li>
+        <li><a href="pages/client.html">Clients</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <button class="mobile-quote-btn">Get Quote</button>
+  </div>
+</div>
+
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="solarvid.mov" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h2 class="slide-left">Welcome to <span>Kanha Enterprises</span></h2>
+      <p class="slide-left">Powering the future with sustainable energy solutions</p>
+      <a href="#quote" class="btn-primary slide-left">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section slide-left">
+    <h2>About Us</h2>    
+    <!-- ===== COMPANY OVERVIEW ===== -->
+  <h2>Company Overview - Kanha Enterprise</h2>
+  <p class="overview-text">
+    KANHA ENTERPRISE is a leading player in the renewable energy sector, dedicated to transforming India's energy landscape 
+    through innovative and sustainable solutions. With a strong focus on solar and wind energy projects, we aim to empower 
+    communities and drive economic growth while minimizing environmental impact.
+  </p>
+  <p class="overview-text">
+    At KANHA ENTERPRISE, we are committed to excellence, safety, and environmental stewardship. Our team of experienced 
+    professionals works tirelessly to exceed client expectations and contribute to a greener, more sustainable future for India.
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3 class="counter" data-target="50">0</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-card">
+      <h3><span class="counter" data-target="500">0</span> kW</h3>
+      <p>Installed Capacity</p>
+    </div>
+    <div class="stat-card">
+      <h3 class="counter" data-target="10">0</h3>
+      <p>Operating Districts</p>
+    </div>
+    <div class="stat-card">
+      <h3><span class="counter" data-target="1000">0</span> Tons</h3>
+      <p>CO₂ Offset</p>
+    </div>
+  </div>
+
+  <a href="#about" class="btn-primary learn-btn">Learn More</a>
+</section>
+
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section id="products" class="section products dark">
+    <h2>Our Products</h2>
+
+  <!-- Filter Buttons -->
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-target="residential">Solar Rooftop - Residential</button>
+    <button class="filter-btn" data-target="commercial">Solar Rooftop – Commercial & Industrial</button>
+    <button class="filter-btn" data-target="pump">Solar Water Pump</button>
+    <button class="filter-btn" data-target="carports">Carports</button>
+  </div>
+
+  <!-- Filter Content -->
+  <div class="filter-content active" id="residential">
+    <img src="images/solar-roof-top-residential.jpg" alt="Residential Solar Rooftop" class="product-img" />
+    <div class="product-text">
+      <h3>Solar Rooftop - Residential</h3>
+      <p>
+        Harness the Sun’s energy right on your rooftop. Dedicated to making our planet cleaner and greener,
+        we deliver eco-friendly power through advanced residential solar rooftop solutions, with a strong
+        focus on sustainability. Our smart offerings bring reliable solar energy to homes, villas, and more.
+      </p>
+      <p>
+        These solutions are built on trust, reliability, and state-of-the-art technology. Our top solar
+        system applications are crafted to integrate smoothly with all types of home solar panels.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="filter-content" id="commercial">
+    <img src="images/commercial-industrial.jpg" alt="Commercial Solar Rooftop" class="product-img" />
+    <div class="product-text">
+      <h3>Solar Rooftop – Commercial & Industrial</h3>
+      <p>
+        For businesses, adopting commercial solar rooftop solutions ensures significant savings by lowering
+        electricity costs. Kanha Rooftop Solutions has assisted numerous industrial and commercial clients
+        in accessing high-quality solar panels and systems to harness solar energy effectively.
+      </p>
+      <p>
+        Our solar-powered billboards deliver excellent returns on investment compared to other solar
+        solutions. Today, solar power systems have become vital for corporate offices, helping industries
+        cut down on grid electricity usage.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="filter-content" id="pump">
+    <img src="images/water-pump.jpg" alt="Solar Water Pump" class="product-img" />
+    <div class="product-text">
+      <h3>Solar Water Pump</h3>
+      <p>
+        The Solar Water Pump initiative reflects Kanha Enterprise’s commitment to improving rural livelihoods,
+        particularly supporting farmers.
+      </p>
+      <p>
+        Equipped with advanced features such as dry-run protection, low power operation, overload safeguards,
+        and lightning arresters, our solar pumps irrigate crops using clean solar energy — suitable for both
+        agricultural and domestic use.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="filter-content" id="carports">
+    <img src="images/products-carport.jpg" alt="Solar Carports" class="product-img" />
+    <div class="product-text">
+      <h3>Carports</h3>
+      <p>
+        Transform your regular parking area into a solar-powered carport. As a leading provider of solar carport
+        solutions, we convert unused parking spaces into energy-generating structures.
+      </p>
+      <p>
+        This approach not only provides shelter for vehicles but also produces clean, renewable energy, maximizing
+        the use of valuable space efficiently.
+      </p>
+      <a href="#" class="btn-primary learn-btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section slide-left">
+    <h2>Our Services</h2>
+    <p>We provide solar installation, maintenance, consultation, and custom energy management services for residential and industrial clients.</p>
+
+    <section class="services-section" id="services">
+      <div class="services-heading">
+      </div>
+    
+      <div class="service-container">
+        <div class="service-image">
+          <img id="service-slide" src="images/solar-roof-top-residential.jpg" alt="Service Image" />
+        </div>
+    
+        <div class="service-list">
+          <ul>
+            <li>▶ Renewable Project Development</li>
+            <li>▶ Transmission Lines and Substations</li>
+            <li>▶ Engineering, Procurement, and Construction (EPC) Projects</li>
+            <li>▶ Operations and Maintenance (O&M)</li>
+            <li>▶ Pre-Development Solutions</li>
+            <li>▶ Consulting and Advisory Services</li>
+            <li>▶ Solar Services</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section dark slide-left">
+    <h2>Projects</h2>
+    <p>Delivering impactful solar projects across India with proven efficiency and reliability.</p>
+
+    <section class="projects-section" id="projects ">
+      <div class="projects-container">
+        <div class="projects-image">
+          <img id="project-slide" src="images/products-carport.jpg" alt="Project Image" />
+        </div>
+    
+        <div class="projects-list">
+          <h3>Projects Completed</h3>
+          <ul>
+            <li>100 KW Shoe Factory, Indore - Madhya Pradesh</li>
+            <li>50 KW Cold Storage, Indore - Madhya Pradesh</li>
+            <li>30 KW Prem Vatika, Ratlam - Madhya Pradesh</li>
+            <li>16 KW National Dhaba, Ratlam - Madhya Pradesh</li>
+            <li>20 KW Rajgarh Complex</li>
+            <li>60 KW Bharat Petroleum BPCL Hybrid</li>
+            <li>11 KW Shri Anand Dham Jain Tirth, Ghasoi</li>
+          </ul>
+          <a href="#" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+    
+  </section>
+
+  <!-- ===== CLIENTS ===== -->
+  <section id="clients" class="section slide-left">
+    <h2>Our Clients</h2>
+    <p>Trusted by leading businesses, industries, and institutions for clean energy solutions.</p>
+    <section class="clients-section" id="clients">
+    
+      <!-- Infinite Logo Slider -->
+      <div class="client-slider">
+        <div class="client-track">
+          <div class="client-logo"><img src="icons/BPCL.NS.png" alt="Client 1"></div>
+          <div class="client-logo"><img src="icons/NationalDhaba.png" alt="Client 2"></div>
+          <div class="client-logo"><img src="icons/Coldstorage.png" alt="Client 3"></div>
+          <div class="client-logo"><img src="icons/Prem vatika.png" alt="Client 4"></div>
+          <div class="client-logo"><img src="icons/Shoes Factory.png" alt="Client 5"></div>
+    
+          <!-- Duplicate logos for infinite loop -->
+          <div class="client-logo"><img src="icons/BPCL.NS.png" alt="Client 1"></div>
+          <div class="client-logo"><img src="icons/NationalDhaba.png" alt="Client 2"></div>
+          <div class="client-logo"><img src="icons/Coldstorage.png" alt="Client 3"></div>
+          <div class="client-logo"><img src="icons/Prem vatika.png" alt="Client 4"></div>
+          <div class="client-logo"><img src="icons/Shoes Factory.png" alt="Client 5"></div>
+        </div>
+      </div>
+    
+      <!-- Testimonials Section -->
+      <div class="testimonials slide-left">
+        <h3>What Our Clients Say</h3>
+        <div class="testimonial-container">
+          <div class="testimonial-card">
+            <p>"Kanha Enterprises transformed our energy usage with their solar solutions. Professional, reliable, and truly customer-focused."</p>
+            <span>— Rajesh Sharma</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <p>"Their team provided excellent support from start to finish. We are now saving big on energy bills every month!"</p>
+            <span>— Priya Verma</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <p>"Innovative, efficient, and sustainable solutions. I highly recommend Kanha Enterprises for solar projects."</p>
+            <span>— Arjun Patel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section dark">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for sustainable solar solutions tailored to your needs.</p>
+
+    <section class="faq-contact-section" id="faq">
+      <div class="faq-contact-container slide-left">
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">How much area is required to set up the rooftop solar system? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Typically, a 1 kW solar system requires about 100 sq. ft. of shadow-free rooftop area, depending on panel efficiency.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">How does net metering work with rooftop solar? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Net metering allows you to send excess solar power to the grid and receive credits that reduce your future electricity bills.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">What about the maintenance of the system and how is it done? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Maintenance involves occasional cleaning of panels and checking system performance. Kanha Enterprises provides O&M support.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">What happens when there's no sunlight on cloudy days? <span>+</span></button>
+            <div class="faq-answer">
+              <p>On cloudy days, solar generation decreases, but your system automatically uses grid electricity to ensure continuous power.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">How long does the rooftop solar system last? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Most solar systems last for 25+ years with minimal maintenance, ensuring long-term savings and clean energy generation.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">Do I need a battery for this system? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Batteries are optional. For grid-connected systems, excess power goes to the grid. Batteries are used for backup systems.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Contact Form -->
+        <div class="contact-form-section slide-right">
+          <h3>Have Questions? Feel Free to Contact Us!</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter your full name" required />
+            </div>
+      
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Enter your email address" required />
+            </div>
+      
+            <div class="form-group">
+              <label>Contact No</label>
+              <input type="tel" placeholder="Enter your contact number" required />
+            </div>
+      
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Type your message here..." required></textarea>
+            </div>
+      
+            <button type="submit" class="send-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <a href="pages/contact.html" class="btn-primary">Get in Touch</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <!-- ======== FOOTER SECTION ======== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-contact">
+      <a href="tel:+91700075898" class="footer-phone">📞 +91-700075898</a>
+      <a href="mailto:info@kanhaenterprise.in" class="footer-email">✉️ info@kanhaenterprise.in</a>
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-column slide-left">
+      <h3>KANHA ENTERPRISE</h3>
+      <p>
+        KANHA ENTERPRISE is one of the emerging Renewable Energy developer players in India
+        catering to the country’s top renewable corporates.
+      </p>
+    </div>
+
+    <div class="footer-column slide-up">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/product.html">Products</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/project.html">Projects</a></li>
+        <li><a href="pages/clients.html">Clients</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column slide-right">
+      <h3>Our Office</h3>
+      <p>
+        Central Plaza Colony, Kasturba Nagar, Ratlam, Madhya Pradesh, India<br>
+        <strong>PIN:</strong> 457001
+      </p>
+      <div class="footer-certificates">
+        <img src="icons/90001.png" alt="IMS Certificate">
+        <img src="icons/—Pngtree—iso 14001 certified company logo_8540372.png" alt="IMS Certificate">
+        <img src="icons/png45001.png" alt="IMS Certificate">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <strong>KANHA ENTERPRISE</strong>. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
