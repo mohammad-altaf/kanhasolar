@@ -132,6 +132,11 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
 }
 
 /* ========== SERVICES SECTION ========== */
+#services.section {
+    background: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 .services-section {
     background: #f8fff9;
     padding: 100px 10%;
@@ -225,6 +230,11 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     transition: opacity 0.5s ease-out;
   }
 /* ================= WHY CHOOSE US ================= */
+#features.section.dark {
+    background: url('../images/blackbg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 .why-choose-section {
     background: #ffffff;
     padding: 80px 8%;
@@ -408,6 +418,12 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   /* ================= PERFORMANCE OVERVIEW ================= */
+
+#performance.section {
+    background-image: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 .performance-section {
     background: transparent;
     padding: 80px 10%;
@@ -528,3 +544,8 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     transform: translateY(0);
   }
   
+    #contact.section.dark {
+    background-image: url('../images/blackbg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }

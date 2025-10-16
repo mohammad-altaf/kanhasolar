@@ -56,7 +56,7 @@ async function handleFormSubmit(event) {
   
   // Pehle form validate karo
   if (!validateForm(form)) {
-    showToast('Kripya * wale sabhi fields bharain', true);
+    showToast('Please fill all required fields (*)', true);
     return false;
   }
   
@@ -64,7 +64,7 @@ async function handleFormSubmit(event) {
   const submitButton = form.querySelector('button[type="submit"]');
   const originalButtonText = submitButton.innerHTML;
   submitButton.disabled = true;
-  submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Bheja ja raha hai...';
+  submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> sending...';
   
   // Get form data
   const formData = {
@@ -107,12 +107,12 @@ async function handleFormSubmit(event) {
     await new Promise(resolve => setTimeout(resolve, remainingTime));
     
     // Success message dikhao aur form ko reset karo
-    showToast('Dhanyawaad! Aapka enquiry submit ho gaya hai.');
+    showToast('Thank you! Your enquiry has been submitted.');
     form.reset();
     
   } catch (error) {
     console.error('Error:', error);
-    showToast('Form submit karne mein error aaya hai. Kripya phir se try karein.', true);
+    showToast('Form submission failed. Please try again.', true);
   } finally {
     // Button ko wapas original state mein lao
     if (submitButton) {

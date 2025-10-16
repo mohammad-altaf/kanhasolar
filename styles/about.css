@@ -216,6 +216,12 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   
 
   /* About Section */
+ #about.section {
+    background-image: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
 .about-grid {
     display: flex;
     justify-content: space-between;
@@ -249,7 +255,7 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
  /* ===== VISION & MISSION SECTION ===== */
-#products.section.dark {
+#visionmission.section.dark {
   padding: 0;
   background: linear-gradient(135deg, #111827, #1e293b);
   color: #fff;
@@ -394,14 +400,17 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
 }
   
   /* ===== OUR SERVICES ===== */
-  #performance.section {
+
+  #servicescard.section {
     padding: 60px 10% 40px;
-    background: #f8fafc;
+    background: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     position: relative;
   }
   
-  #performance.section::before {
+  #servicescard.section::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -411,9 +420,9 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     opacity: 0.03;
   }
   
-  #performance h2 {
+  #servicescard h2 {
     font-size: 2.5rem;
-    color: #222;
+    color: #7ac943;
     margin-bottom: 50px;
     position: relative;
   }
@@ -502,6 +511,11 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   /* ===== OUR TEAM ===== */
+  #team.section.dark {
+    background-image: url('../images/blackbg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
   .team-section {
     background: linear-gradient(135deg, #111827, #1e293b);
     color: #fff;
@@ -521,6 +535,8 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     flex-wrap: wrap;
     gap: 40px;
   }
+
+
   
   .team-card {
     background: rgba(255, 255, 255, 0.05);
@@ -575,8 +591,15 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   /* ===== CORE VALUES ===== */
+  #values.section {
+    background-image: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }  
+
   .core-values {
-    background: #f8fafc;
+    background: transparent;
     padding: 60px 10% 40px;
     text-align: center;
     position: relative;
@@ -584,7 +607,7 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   
   .core-values h2 {
     font-size: 2rem;
-    color: #222;
+    color: #7ac943;
     margin-bottom: 50px;
   }
   
@@ -692,3 +715,8 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     }
   }
   
+  #contact.section.dark {
+    background-image: url('../images/blackbg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }

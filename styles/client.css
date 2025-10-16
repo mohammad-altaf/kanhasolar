@@ -147,8 +147,19 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
 }
 
 /* ========== CLIENTS SECTION ========== */
+#clients.section {
+    padding: 60px 10% 40px;
+    background: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+  }
 .clients-section {
-    background: #f8fff9;
+    background: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
     padding: 100px 10%;
     text-align: center;
   }
@@ -298,7 +309,23 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     }
   }
 
+  /* ================= featurs SECTION ================= */
+
+  #features.section {
+    padding: 60px 10% 40px;
+    background: url('../images/blackbg2.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+  }
+
   /* ================= PERFORMANCE OVERVIEW ================= */
+  #performance.section {
+    background-image: url('../images/whitebg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 .performance-section {
     background: transparent;
     padding: 80px 10%;
@@ -419,3 +446,8 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     transform: translateY(0);
   }
   
+    #contact.section.dark {
+    background-image: url('../images/blackbg2.jpg');
+    background-size: cover;
+    background-position: center;
+  }

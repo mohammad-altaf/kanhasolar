@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanha Enterprises - Solar Solutions</title>
+  <title>Kanha Enterprises - Contact Us</title>
   <link rel="stylesheet" href="../styles/contact.css" />
-  <link rel="stylesheet" href="../styles/feature.css" />
   <link rel="stylesheet" href="../styles/footer.css" />
   <link rel="stylesheet" href="../styles/animation.css" />
   <link rel="stylesheet" href="../styles/hamburger-menu.css" />
-  <link rel="stylesheet" href="../styles/form.css" />
-  <script defer src="../js/contact.js"></script>
   <script defer src="../js/animation.js"></script>
-  <script defer src="../js/counter.js"></script>
   <script defer src="../js/hamburger-menu.js"></script>
+  <script defer src="../js/contact.js"></script>
   <script defer src="../js/form.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -54,13 +51,13 @@
       
       <nav class="mobile-nav">
         <ul>
-          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/about.html">About Us</a></li>
           <li><a href="../pages/product.html">Products</a></li>
           <li><a href="../pages/service.html">Services</a></li>
           <li><a href="../pages/project.html">Projects</a></li>
           <li><a href="../pages/client.html">Clients</a></li>
-          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
       
@@ -74,197 +71,150 @@
       <source src="../solarvid.mov" type="video/mp4">
     </video>
     <div class="hero-content">
-      <h2 class="slide-left">Welcome to <span>Kanha Enterprises</span></h2>
-      <p class="slide-left">Powering the future with sustainable energy solutions</p>
-      <a href="../pages/contact.html#contact" class="btn-primary slide-left">Get a Quote</a>
+      <h2 class="slide-left">Contact <span>Us</span></h2>
+      <p class="slide-left">Get in touch for sustainable energy solutions</p>
+      <a href="#contact" class="btn-primary slide-left">Get in Touch</a>
     </div>
   </section>
-  <!-- ===== CLIENTS ===== -->
-  <section id="contact" class="section">
-    <top class="number">
-        <div class="number-top">
-          <div class="number-contact">
-            <a href="tel:+91700075898" class="number-phone"> 📞 +91-700075898</a>
-            <a href="mailto:info@kanhaenterprise.in" class="number-email">✉️ info@kanhaenterprise.in</a>
-          </div>
-        </div>
-    </top>
 
-    <section class="contact-section" id="contact">
-        <div class="contact-container ">
-      
-          <!-- Left Side: Contact Info -->
-          <div class="contact-info slide-left">
-            <h2 class="section-heading">Get in Touch</h2>
-            <p><strong>Email:</strong> info@kanhaenterprises.in</p>
-      
-            <h3>Our Office</h3>
-            <p>
-              <strong>Kanha Enterprises</strong><br>
-              Central Plaza Colony, Kasturba Nagar,<br>
-              Ratlam, Madhya Pradesh, India<br>
-              PIN: 457001
-            </p>
-      
-            <p class="desc">
-              We ensure reliability, low cost fares, and most importantly, safety and comfort in every service.
-              Etiam sit amet convallis erat – class aptent taciti sociosqu ad litora torquent per conubia torquent!
-              Maecenas gravida lacus. Lorem etiam sit amet convallis erat.
-            </p>
-      
-            <div class="logo-box">
-              <img src="../KE LOGO.png" alt="Kanha Logo">
+  <!--NUMBER SECTION-->
+  <section id="number" class="number-top slide-left">
+    <div class="number-contact">
+      <h2 class="section-heading">Contact Now</h2>
+      <div class="contact-buttons">
+        <a href="tel:+91700075898" class="number-phone">📞 +91-7000375898</a>
+        <a href="mailto:info@kanhaenterprise.in" class="number-email">✉️ info@kanhaenterprise.in</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact-section ">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- Left Side: Get in Touch -->
+        <div class="contact-info slide-left">
+          <h2>Get in Touch</h2>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email:</h4>
+                <a href="mailto:info@kanhaenterprises.in">info@kanhaenterprises.in</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Our Office</h4>
+                <p>Kanha Enterprises<br>
+                Central Plaza Colony, Kasturba Nagar,<br>
+                Ratlam, Madhya Pradesh, India<br>
+                PIN: 457001</p>
+              </div>
+            </div>
+            
+            <div class="about-us">
+              <p>We ensure reliability, low cost fares, and most importantly, safety and comfort in every service. Etiam sit amet convallis erat – class aptent taciti sociosqu ad litora torquent per conubia torquent! Maecenas gravida lacus. Lorem etiam sit amet convallis erat.</p>
+            </div>
+            
+            <div class="logo-container">
+              <img src="../KE LOGO.png" alt="Kanha Enterprises Logo" class="contact-logo">
             </div>
           </div>
-      
-          <!-- Right Side: Enquiry Form -->
-          <div class="contact-form slide-right">
-            <h2 class="section-heading">Customer Enquiry Form</h2>
-            <div id="toast" class="toast"></div>
-            <form id="enquiryForm" onsubmit="return handleFormSubmit(event)">
+        </div>
+        
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form slide-right">
+          <h2 class="section-heading">Customer Enquiry Form</h2>
+          <div id="toast" class="toast"></div>
+          <form id="enquiryForm" onsubmit="return handleFormSubmit(event)">
+            <div class="form-row">
               <div class="form-group">
-                <input type="text" name="name" id="name" placeholder="Name *" required>
-                <input type="email" name="email" id="email" placeholder="Email *" required>
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
               </div>
-      
+              
               <div class="form-group">
-                <input type="text" name="mobile" id="mobile" placeholder="Mobile *" required>
-                <input type="text" name="city" id="city" placeholder="City *" required>
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
               </div>
-      
+            </div>
+            
+            <div class="form-row">
               <div class="form-group">
-                <select name="state" id="state" required>
-                  <option value="">Select State *</option>
-                  <option>Madhya Pradesh</option>
-                  <option>Maharashtra</option>
-                  <option>Gujarat</option>
-                  <option>Rajasthan</option>
-                  <option>Uttar Pradesh</option>
+                <label for="mobile">Mobile <span class="required">*</span></label>
+                <input type="tel" id="mobile" name="mobile" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="state">Select State <span class="required">*</span></label>
+                <select id="state" name="state" required>
+                  <option value="">Select State</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Other">Other</option>
                 </select>
-                <input type="text" name="pincode" id="pincode" placeholder="Pin Code">
               </div>
-      
+              
               <div class="form-group">
-                <input type="text" name="installation_type" id="installation_type" placeholder="Type Installation">
-                <input type="number" name="capacity" id="capacity" placeholder="Capacity (KWp)">
+                <label for="pincode">Pin Code</label>
+                <input type="text" id="pincode" name="pincode">
               </div>
-      
+            </div>
+            
+            <div class="form-row">
               <div class="form-group">
-                <input type="text" name="area" id="area" placeholder="Area in Sq Ft">
-                <input type="text" name="avg_bill" id="avg_bill" placeholder="Avg Monthly Bill (INR)">
+                <label for="installation">Type Installation</label>
+                <input type="text" id="installation_type" name="installation_type">
               </div>
-      
-              <textarea name="description" id="description" rows="4" placeholder="Description"></textarea>
-      
-              <button type="submit" class="btn-submit">Submit</button>
-            </form>
-          </div>
+              
+              <div class="form-group">
+                <label for="capacity">Capacity (KWp)</label>
+                <input type="number" id="capacity" name="capacity" min="0" step="0.1">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="area">Area in Sq Ft</label>
+                <input type="number" id="area" name="area" min="0">
+              </div>
+              
+              <div class="form-group">
+                <label for="bill">Avg Monthly Bill (INR)</label>
+                <input type="number" id="avg_bill" name="avg_bill" min="0">
+              </div>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
         </div>
-      </section>
-  </section>
-  <!-- ===== PRODUCTS ===== -->
-  <section id="products" class="section dark slide-up">
-    <!-- ===== SERVICES ===== -->
-    <section class="features-section">
-        <div class="features-container">
-      
-          <!-- Feature 1 -->
-          <div class="feature-box">
-            <img src="../icons/satisfaction.png" alt="Customer Delight" class="feature-icon">
-            <h3 class="feature-title">Customer Delight</h3>
-            <p class="feature-subtitle">We strive to deliver excellence in every aspect, ensuring complete satisfaction for our customers.</p>
-          </div>
-      
-          <!-- Feature 2 -->
-          <div class="feature-box">
-            <img src="../icons/trust.png" alt="Trust" class="feature-icon">
-            <h3 class="feature-title">Trust</h3>
-            <p class="feature-subtitle">The foundation of all our relationships with clients, partners, and stakeholders.</p>
-          </div>
-      
-          <!-- Feature 3 -->
-          <div class="feature-box">
-            <img src="../icons/quality-assurance.png" alt="Quality & Safety" class="feature-icon">
-            <h3 class="feature-title">Quality & Safety</h3>
-            <p class="feature-subtitle">An uncompromising principle that defines our operations and services.</p>
-          </div>
-      
-          <!-- Feature 4 -->
-          <div class="feature-box">
-            <img src="../icons/sustainable.png" alt="Sustainability" class="feature-icon">
-            <h3 class="feature-title">Sustainability</h3>
-            <p class="feature-subtitle">Our long-term goal, driving us to create solutions that benefit both people and the planet.</p>
-          </div>
-      
-          <!-- Feature 5 -->
-          <div class="feature-box">
-            <img src="../icons/ethics.png" alt="Ethics & Integrity" class="feature-icon">
-            <h3 class="feature-title">Ethics & Integrity</h3>
-            <p class="feature-subtitle">The guiding values that shape our actions and strengthen our existence.</p>
-          </div>
-      
-          <!-- Feature 6 -->
-          <div class="feature-box">
-            <img src="../icons/progress.png" alt="RISE Philosophy" class="feature-icon">
-            <h3 class="feature-title">RISE Philosophy</h3>
-            <p class="feature-subtitle">Focused on People, Planet, and Profit to create a balanced and sustainable future.</p>
-          </div>
-        </div>
-      </section>
-
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-<section id="performance" class="section">
-    <section class="performance-section" id="performance">
-        <h2 class="section-heading">Performance Overview</h2>
-        <div class="performance-grid slide-up">
-          <div class="performance-card">
-            <h3><span class="counter" data-target="50">0</span>+</h3>
-            <p>Projects Completed across residential, commercial, and agricultural segments</p>
-          </div>
-      
-          <div class="performance-card">
-            <h3><span class="counter" data-target="10">0</span>+ MW</h3>
-            <p>Solar Capacity Installed, powering sustainable energy solutions</p>
-          </div>
-      
-          <div class="performance-card">
-            <h3><span class="counter" data-target="24">0</span>/7</h3>
-            <p>Monitoring & Support for all installed systems</p>
-          </div>
-      
-          <div class="performance-card">
-            <h3><span class="counter" data-target="90">0</span>%+</h3>
-            <p>Customer Satisfaction Rate, with numerous positive testimonials</p>
-          </div>
-      
-          <div class="performance-card">
-            <h3><span class="counter" data-target="1000">0</span>+</h3>
-            <p>Helped clients offset <strong>1,000+ tons of CO₂</strong> through clean energy installations 🌱</p>
-          </div>
-      
-          <div class="performance-card">
-            <h3><span class="counter" data-target="4">0</span> yrs</h3>
-            <p>Average project ROI: <strong>3–4 years</strong> via net metering and subsidy support 💡</p>
-          </div>
-        </div>
-      </section>
-    </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section dark">
-    <h2 class="slide-left">Contact Us</h2>
-    <p class="slide-left">Get in touch with us for sustainable solar solutions tailored to your needs.</p>
-    <p class="slide-left"> -</p>
-    <a href="#quote" class="btn-primary slide-left">Get in Touch</a>
+      </div>
+    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-top">
         <div class="footer-contact">
-          <a href="tel:+91700075898" class="footer-phone">📞 +91-700075898</a>
+          <a href="tel:+91700075898" class="footer-phone">📞 +91-7000375898</a>
           <a href="mailto:info@kanhaenterprise.in" class="footer-email">✉️ info@kanhaenterprise.in</a>
         </div>
       </div>
