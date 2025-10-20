@@ -44,6 +44,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .mobile-menu-logo {
@@ -64,8 +65,9 @@
 }
 
 .mobile-nav {
-  flex-grow: 1;
-  margin-bottom: 12px;
+  /* prevent stretching that creates large gap above the CTA */
+  flex-grow: 0;
+  margin-bottom: 8px;
 }
 
 .mobile-nav ul {
@@ -88,6 +90,18 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* If Get Quote is placed inside the list, ensure it aligns and has no divider */
+.mobile-nav .mobile-quote-btn {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin-top: 8px;
+  border-bottom: none;
+}
+
+/* Tighten last item spacing */
+.mobile-nav li:last-child { margin-bottom: 0; }
+
 .mobile-nav a:hover,
 .mobile-nav a.active {
   color: #7ac943;
@@ -103,9 +117,10 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  margin-top: auto;
-  width: 80%;
-  max-width: 180px;
+  /* place button right after the nav, not pinned to bottom */
+  margin-top: 8px;
+  width: 100%;
+  max-width: none;
   align-self: center;
 }
 
