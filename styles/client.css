@@ -223,8 +223,11 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   
   /* ========== TESTIMONIALS SECTION ========== */
   .testimonials {
-    margin-top: 50px;
-  }
+  margin-top: 50px;
+  /* Full-bleed to counter parent 10% horizontal padding */
+  margin-left: calc(-10%);
+  margin-right: calc(-10%);
+}
   
   .testimonials h3 {
     font-size: 2rem;
@@ -234,26 +237,26 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   .testimonial-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: nowrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
   
   .testimonial-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    flex: 1;
-    min-width: 0; /* Allows flex items to shrink below their minimum content size */
-    text-align: left;
-    transition: all 0.4s ease;
-    animation: fadeInUp 1s ease-in-out;
-  }
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 16px 18px;
+  flex: 1;
+  min-width: 0; /* Allows flex items to shrink below their minimum content size */
+  text-align: left;
+  transition: all 0.4s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
   
   /* Responsive adjustments */
   @media (max-width: 1024px) {
@@ -280,19 +283,19 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   .testimonial-card p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    font-style: italic;
-  }
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.45;
+  font-style: italic;
+}
   
   .testimonial-card span {
-    display: block;
-    font-weight: 600;
-    color: #39a845;
-    font-size: 0.95rem;
-  }
+  display: block;
+  font-weight: 600;
+  color: #39a845;
+  font-size: 0.9rem;
+}
   
   /* Animation */
   @keyframes fadeInUp {
@@ -302,17 +305,20 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   
   /* Responsive */
   @media (max-width: 768px) {
-    .client-logo {
-      width: 120px;
-      padding: 10px;
-    }
-    .testimonials h3 {
-      font-size: 1.5rem;
-    }
-    .testimonial-card {
-      max-width: 90%;
-    }
+  .testimonials { margin-left: calc(-10%); margin-right: calc(-10%); }
+  .client-logo {
+    width: 120px;
+    padding: 10px;
   }
+  .testimonials h3 {
+    font-size: 1.5rem;
+  }
+  .testimonial-card {
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+}
 
   /* ================= featurs SECTION ================= */
 
