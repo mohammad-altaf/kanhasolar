@@ -129,9 +129,9 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
   .hamburger.open span:nth-child(2){opacity:0}
   .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-  /* hero text smaller */
+  /* hero text smaller 
   .hero-content h2{font-size:1.6rem}
-  .hero-content p{font-size:1rem}
+  .hero-content p{font-size:1rem}*/
 }
 
   /* ===== OUR PRODUCTS ===== */
