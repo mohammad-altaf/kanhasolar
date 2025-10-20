@@ -69,12 +69,12 @@
   <!-- ===== HERO SECTION ===== -->
   <section id="home" class="hero">
     <video autoplay muted loop playsinline>
-      <source src="solarvid.mov" type="video/mp4">
+      <source src="panel1.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
       <h2 class="slide-left">Welcome to <span>Kanha Enterprises</span></h2>
       <p class="slide-left">Powering the future with sustainable energy solutions</p>
-      <a href="#quote" class="btn-primary slide-left">Get a Quote</a>
+      <a href="pages/contact.html#contact" class="btn-primary slide-left">Get a Quote</a>
     </div>
   </section>
 
@@ -114,7 +114,7 @@
             <p>CO₂ Offset</p>
           </div>
         </div>
-        <a href="#about" class="btn-primary learn-btn">Learn More</a>
+        <a href="pages/about.html#about" class="btn-primary learn-btn">Learn More</a>
       </div>
     </div>
 </section>
@@ -124,12 +124,22 @@
   <p>Our training programs are designed to empower individuals and organizations with the knowledge and skills needed to harness the power of solar energy. Whether you're a professional looking to expand your expertise or an individual seeking to learn more about solar technology, our training programs offer a comprehensive learning experience.</p>
   <div class="service-list">
     <ul>
-      <li>▶ Sales and Marketing</li>
-      <li>▶ Technician Training</li>
-      <li>▶ Installation and Maintenance</li>
+      <li><a href="pages/about.html#training" class="training-link">▶ Sales and Marketing</a></li>
+      <li><a href="pages/about.html#training" class="training-link">▶ Technician Training</a></li>
+      <li><a href="pages/about.html#training" class="training-link">▶ Installation and Maintenance</a></li>
     </ul>
   </div>
-  <a href="#training" class="btn-primary learn-btn">Learn More</a>
+  <style>
+    .training-link {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+    .training-link:hover {
+      color: #7ac943;
+    }
+  </style>
+  <a href="pages/about.html#training" class="btn-primary learn-btn">Learn More</a>
 </section>
 
 
@@ -159,7 +169,7 @@
         These solutions are built on trust, reliability, and state-of-the-art technology. Our top solar
         system applications are crafted to integrate smoothly with all types of home solar panels.
       </p>
-      <a href="#" class="btn-primary learn-btn">Learn More</a>
+      <a href="pages/product.html#products" class="btn-primary learn-btn">Learn More</a>
     </div>
   </div>
 
@@ -177,7 +187,7 @@
         solutions. Today, solar power systems have become vital for corporate offices, helping industries
         cut down on grid electricity usage.
       </p>
-      <a href="#" class="btn-primary learn-btn">Learn More</a>
+      <a href="pages/product.html#products" class="btn-primary learn-btn">Learn More</a>
     </div>
   </div>
 
@@ -194,7 +204,7 @@
         and lightning arresters, our solar pumps irrigate crops using clean solar energy — suitable for both
         agricultural and domestic use.
       </p>
-      <a href="#" class="btn-primary learn-btn">Learn More</a>
+      <a href="pages/product.html#products" class="btn-primary learn-btn">Learn More</a>
     </div>
   </div>
 
@@ -210,7 +220,7 @@
         This approach not only provides shelter for vehicles but also produces clean, renewable energy, maximizing
         the use of valuable space efficiently.
       </p>
-      <a href="#" class="btn-primary learn-btn">Learn More</a>
+      <a href="pages/product.html#products" class="btn-primary learn-btn">Learn More</a>
     </div>
   </div>
 </section>
@@ -264,7 +274,7 @@
             <li>60 KW Bharat Petroleum BPCL Hybrid</li>
             <li>11 KW Shri Anand Dham Jain Tirth, Ghasoi</li>
           </ul>
-          <a href="#" class="learn-btn">Learn More</a>
+          <a href="pages/project.html#projects" class="learn-btn">Learn More</a>
         </div>
       </div>
     </section>
@@ -318,7 +328,7 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section dark">
+  <section id="contactfaq" class="section">
     <h2>Contact Us</h2>
     <p>Get in touch with us for sustainable solar solutions tailored to your needs.</p>
 
@@ -366,6 +376,11 @@
               <p>Batteries are optional. For grid-connected systems, excess power goes to the grid. Batteries are used for backup systems.</p>
             </div>
           </div>
+          
+    <!-- Logo below FAQ section -->
+    <div class="faq-logo-container">
+      <img src="KE LOGO.png" alt="Kanha Enterprises Logo" class="faq-logo">
+    </div>
         </div>
       
         <!-- Contact Form -->
@@ -404,15 +419,23 @@
         </div>
       </div>
     </section>
-    <a href="pages/contact.html" class="btn-primary">Get in Touch</a>
+
+    <a href="pages/contact.html#contact" class="btn-primary">Get in Touch</a>
   </section>
 
   <section id="partners" class="section">
+    <h2 class="section-title">Our Partners</h2>
     <div class="Partner-certificates slide-left">
+      <div class="partner-logo">
         <img src="icons/UTL.png" alt="UTL Certificate">
+      </div>
+      <div class="partner-logo">
         <img src="icons/ecofy.png" alt="Ecofy Certificate">
+      </div>
+      <div class="partner-logo">
         <img src="icons/mahindra.jpeg" alt="Mahindra Certificate">
       </div>
+    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
@@ -433,6 +456,20 @@
         KANHA ENTERPRISE is one of the emerging Renewable Energy developer players in India
         catering to the country’s top renewable corporates.
       </p>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/917000375898" target="_blank" class="social-icon whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
 
     <div class="footer-column slide-up">

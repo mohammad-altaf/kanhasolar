@@ -111,8 +111,52 @@ async function handleFAQFormSubmit(event) {
   }
 }
 
-// Initialize form when DOM is loaded
+// Toggle FAQ answer visibility
+function toggleFAQ(button) {
+  const faqItem = button.closest('.faq-item');
+  const answer = faqItem.querySelector('.faq-answer');
+  const isExpanded = button.getAttribute('aria-expanded') === 'true';
+  
+  // Toggle the expanded state
+  button.setAttribute('aria-expanded', !isExpanded);
+  
+  // Toggle the answer visibility with smooth animation
+  if (isExpanded) {
+    answer.style.maxHeight = '0';
+    button.innerHTML = button.innerHTML.replace('−', '+');
+  } else {
+    // Close other open FAQs
+    document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(openBtn => {
+      if (openBtn !== button) {
+        openBtn.setAttribute('aria-expanded', 'false');
+        openBtn.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+        openBtn.innerHTML = openBtn.innerHTML.replace('−', '+');
+      }
+    });
+    
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    button.innerHTML = button.innerHTML.replace('+', '−');
+  }
+}
+
+// Initialize form and FAQ functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize FAQ accordion
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(button => {
+    button.setAttribute('aria-expanded', 'false');
+    button.addEventListener('click', () => toggleFAQ(button));
+    
+    // Add keyboard navigation
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFAQ(button);
+      }
+    });
+  });
+  
+  // Initialize contact form
   const faqForm = document.querySelector('.faq-contact-section .contact-form');
   if (faqForm) {
     faqForm.addEventListener('submit', handleFAQFormSubmit);

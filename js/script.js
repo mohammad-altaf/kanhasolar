@@ -69,7 +69,7 @@ const serviceImages = [
     "images/solar-roof-top-residential.jpg",
     "images/commercial-industrial.jpg",
     "images/water-pump.jpg",
-    "images/products-carports.jpg"
+    "images/products-carport.jpg"
   ];
   
   let currentIndex = 0;
@@ -92,7 +92,7 @@ const projectImages = [
     "images/solar-roof-top-residential.jpg",
     "images/commercial-industrial.jpg",
     "images/water-pump.jpg",
-    "images/products-carports.jpg"
+    "images/products-carport.jpg"
   ];
   
   let projectIndex = 0;

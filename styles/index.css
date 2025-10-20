@@ -523,12 +523,42 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .stats-grid-container {
+    padding: 0 10px;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-width: 100%;
+  }
+  
+  .stat-card {
+    padding: 15px 5px;
+  }
+  
+  .stat-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .stat-card p {
+    font-size: 0.8rem;
+  }
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 15px;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -598,7 +628,27 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 20px 10px;
+  }
+  
+  .stat-card h3 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Single column for very small screens */
+@media (max-width: 400px) {
   .stats-grid {
     grid-template-columns: 1fr;
   }
@@ -1073,17 +1123,21 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     padding: 20px;
   }
   
+  .client-logo {
+    padding: 0 30px; /* Increased padding for better spacing */
+  }
+  
   .client-logo img {
-    width: 100%;
+    width: 120%; /* Increased logo size */
+    max-width: 200px; /* Limit maximum size */
     height: auto;
-    opacity: 0.8;
+    opacity: 1; /* Removed transparency */
     transition: all 0.3s ease;
+    filter: none; /* Remove grayscale filter */
   }
   
   .client-logo img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.15); /* Slightly larger hover effect */
   }
   
   /* Logo Scroll Animation */
@@ -1192,10 +1246,35 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     background-position: center;
   }
 
+/* FAQ Logo Container */
+.faq-logo-container {
+    text-align: center;
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.faq-logo {
+    max-width: 120px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.faq-logo:hover {
+    transform: scale(1.05);
+}
+
 .faq-contact-section {
     background: transparent;
-    padding: 100px 5%;
+    padding: 40px 5%;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 0;
   }
   
   .faq-heading h2 {
@@ -1215,11 +1294,14 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   /* FAQ and Contact Container */
   .faq-contact-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
     gap: 40px;
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    min-height: 0;
   }
   
   /* FAQ Accordion */
@@ -1230,8 +1312,9 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     margin: 0;
   }
   
+  
   .faq-item {
-    background: #f8fff9;
+    background: #7ac943;
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -1290,11 +1373,20 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   /* Contact Form */
+
+
+  #contact.faq-section, .contact-form-section {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: auto;
+    min-height: 0;
+    overflow-y: auto;
+  }
+  
   .contact-form-section {
-    background: #f8fff9;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     flex: 1;
     min-width: 300px;
     max-width: 500px;
@@ -1303,9 +1395,9 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   }
   
   .contact-form-section h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #111;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 700;
   }
   
@@ -1382,30 +1474,91 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
   /* ======== FOOTER STYLING ======== */
 /* Partner Certificates Section */
 #partners.section {
-    background-image: url('../images/blackbg2.jpg');
-    background-size: cover;
-    background-position: center;
-  }
+  background-image: url('../images/blackbg2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+#partners .section-title {
+  color: #7ac943;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+#partners .section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #7ac943;
+}
 
 .Partner-certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.partner-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 10px 10px;
-  background: transparent;
-  margin: 10px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partner-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .Partner-certificates img {
-  max-width: 150px;
+  max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  max-height: 80px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  opacity: 0.9;
 }
 
-.Partner-certificates img:hover {
-  transform: scale(1.03);
+.partner-logo:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .Partner-certificates {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .partner-logo {
+    padding: 15px;
+  }
+  
+  #partners .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
 }
 
 .footer {
@@ -1452,7 +1605,49 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
     text-align: left;
   }
   
-  .footer-column h3 {
+  /* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+  transform: scale(1.2);
+}
+
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.twitter { background-color: #1da1f2; }
+.social-icon.linkedin { background-color: #0077b5; }
+.social-icon.instagram { 
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.social-icon.whatsapp { background-color: green; }
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-column h3 {
     color: #7ac943;
     font-size: 1.2rem;
     margin-bottom: 15px;

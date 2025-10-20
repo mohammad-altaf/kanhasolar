@@ -9,7 +9,12 @@
 
 /* Reset */
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
+html,body{
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body{
   font-family:"Poppins",sans-serif;
   color:#111;
@@ -95,7 +100,16 @@ header{
 .btn-primary{background:var(--green);padding:12px 26px;border-radius:30px;color:#fff;text-decoration:none;font-weight:600}
 
 /* Sections */
-.section{padding:70px 10%;text-align:center}
+/* Ensure sections don't cause horizontal overflow */
+.section{
+  padding: 70px 5%;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .section.dark{background:#0f0f0f;color:#eee}
 .section h2{color:var(--green);margin-bottom:14px;font-size:2rem}
 .section p{max-width:900px;margin:0 auto;line-height:1.7}
@@ -130,8 +144,10 @@ footer{background:#000;color:#bfbfbf;padding:18px;text-align:center;font-size:.9
 .products {
     background: linear-gradient(160deg, #0b0b0b 0%, #121212 100%);
     color: #0b0b0b;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     padding: 70px 0;
     margin-top: 25px;
     margin-bottom: 40px;
